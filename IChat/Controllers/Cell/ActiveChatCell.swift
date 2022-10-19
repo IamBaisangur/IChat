@@ -8,6 +8,16 @@
 import UIKit
 
 class ActiveChatCell: UICollectionViewCell, SelfConfiguringCell {
+    func configure(with value: MChat) {
+        friendImageView.image = UIImage(named: value.userImageString)
+        freindName.text = value.username
+        lastMessage.text = value.lastMessage
+    }
+    
+    func configure<U>(with value: U) where U : Hashable {
+        print("")
+    }
+    
     static var reuseId: String = "ActiveChatCell"
     
     let friendImageView = UIImageView()
@@ -22,13 +32,6 @@ class ActiveChatCell: UICollectionViewCell, SelfConfiguringCell {
         
         self.layer.cornerRadius = 4
         self.clipsToBounds = true
-    }
-    
-    
-    func configure(with value: MChat) {
-        friendImageView.image = UIImage(named: value.userImageString)
-        freindName.text = value.username
-        lastMessage.text = value.lastMessage
     }
     
     required init?(coder: NSCoder) {

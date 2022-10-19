@@ -23,6 +23,9 @@
 		02562A2028E5531800F7447C /* ButtonFormView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 02562A1F28E5531800F7447C /* ButtonFormView.swift */; };
 		02562A2228E58D5400F7447C /* SignUpViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 02562A2128E58D5400F7447C /* SignUpViewController.swift */; };
 		02562A2528E5B74B00F7447C /* OneLineTextField.swift in Sources */ = {isa = PBXBuildFile; fileRef = 02562A2428E5B74B00F7447C /* OneLineTextField.swift */; };
+		0295906D28FFF84400D6D653 /* ProfileViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0295906C28FFF84300D6D653 /* ProfileViewController.swift */; };
+		0295906F2900140B00D6D653 /* InsertableTextField.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0295906E2900140A00D6D653 /* InsertableTextField.swift */; };
+		02A7625528FEA03B005CC21A /* UserCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 02A7625428FEA03B005CC21A /* UserCell.swift */; };
 		02B6161A28F6944800A30DDD /* ActiveChatCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 02B6161928F6944800A30DDD /* ActiveChatCell.swift */; };
 		02BDA21E28D83065003C6D51 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 02BDA21D28D83065003C6D51 /* AppDelegate.swift */; };
 		02BDA22028D83065003C6D51 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 02BDA21F28D83065003C6D51 /* SceneDelegate.swift */; };
@@ -52,6 +55,9 @@
 		02562A1F28E5531800F7447C /* ButtonFormView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ButtonFormView.swift; sourceTree = "<group>"; };
 		02562A2128E58D5400F7447C /* SignUpViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SignUpViewController.swift; sourceTree = "<group>"; };
 		02562A2428E5B74B00F7447C /* OneLineTextField.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = OneLineTextField.swift; sourceTree = "<group>"; };
+		0295906C28FFF84300D6D653 /* ProfileViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProfileViewController.swift; sourceTree = "<group>"; };
+		0295906E2900140A00D6D653 /* InsertableTextField.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = InsertableTextField.swift; sourceTree = "<group>"; };
+		02A7625428FEA03B005CC21A /* UserCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UserCell.swift; sourceTree = "<group>"; };
 		02B6161928F6944800A30DDD /* ActiveChatCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ActiveChatCell.swift; sourceTree = "<group>"; };
 		02BDA21A28D83065003C6D51 /* IChat.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = IChat.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		02BDA21D28D83065003C6D51 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
@@ -110,6 +116,7 @@
 			children = (
 				02BDA23128D847B0003C6D51 /* ExtensionsUIKit.swift */,
 				0223812B28EB0EAE0030D8C1 /* AddPhotoView.swift */,
+				0295906E2900140A00D6D653 /* InsertableTextField.swift */,
 				02562A1F28E5531800F7447C /* ButtonFormView.swift */,
 				02562A2428E5B74B00F7447C /* OneLineTextField.swift */,
 				02409AE828F2B55400567E2D /* Bundle-Decodable.swift */,
@@ -128,8 +135,9 @@
 				02D6F44C28EDA754002DD3DD /* ListViewController.swift */,
 				021B182628F96237000C4ED8 /* SectionHeader.swift */,
 				02D6F45028EDC424002DD3DD /* PeopleViewController.swift */,
-				0223812D28EC624A0030D8C1 /* Signin&Auth */,
+				0295906C28FFF84300D6D653 /* ProfileViewController.swift */,
 				02B6161828F6940600A30DDD /* Cell */,
+				0223812D28EC624A0030D8C1 /* Signin&Auth */,
 			);
 			path = Controllers;
 			sourceTree = "<group>";
@@ -139,6 +147,7 @@
 			children = (
 				02B6161928F6944800A30DDD /* ActiveChatCell.swift */,
 				021B182128F95344000C4ED8 /* WaitingChatCell.swift */,
+				02A7625428FEA03B005CC21A /* UserCell.swift */,
 			);
 			path = Cell;
 			sourceTree = "<group>";
@@ -263,11 +272,14 @@
 				0223812828E6CF3D0030D8C1 /* LoginViewController.swift in Sources */,
 				02BDA22028D83065003C6D51 /* SceneDelegate.swift in Sources */,
 				0223812C28EB0EAE0030D8C1 /* AddPhotoView.swift in Sources */,
+				0295906D28FFF84400D6D653 /* ProfileViewController.swift in Sources */,
 				02562A2528E5B74B00F7447C /* OneLineTextField.swift in Sources */,
 				02B6161A28F6944800A30DDD /* ActiveChatCell.swift in Sources */,
 				02BDA23228D847B0003C6D51 /* ExtensionsUIKit.swift in Sources */,
 				021B182228F95344000C4ED8 /* WaitingChatCell.swift in Sources */,
 				020F95DA28FD6830001BDBC9 /* MUser.swift in Sources */,
+				02A7625528FEA03B005CC21A /* UserCell.swift in Sources */,
+				0295906F2900140B00D6D653 /* InsertableTextField.swift in Sources */,
 				021B182428F95789000C4ED8 /* SelfConfiguringCell.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;

@@ -8,6 +8,34 @@
 import Foundation
 import UIKit
 
+// MARK: - extension UIView
+
+extension UIView {
+    
+    func applyGradients(cornerRadius: CGFloat) {
+        self.backgroundColor = nil
+        self.layoutIfNeeded()
+        let gradientView = GradientView(from: .topTrailing, to: .bottomLeading,  startColor: #colorLiteral(red: 0.8309441209, green: 0.7057330012, blue: 0.9536229968, alpha: 1), endColor: #colorLiteral(red: 0.4784313725, green: 0.6980392157, blue: 0.9215686275, alpha: 1))
+        if let gradientLayer = gradientView.layer.sublayers?.first as? CAGradientLayer {
+            gradientLayer.frame = self.bounds
+            gradientLayer.cornerRadius = cornerRadius
+            
+            self.layer.insertSublayer(gradientLayer, at: 0)
+        }
+    }
+}
+
+// MARK: - extension UIViewController
+
+extension UIViewController {
+    func configure<T: SelfConfiguringCell, U: Hashable> (collectionView: UICollectionView, cellType: T.Type, with value: U, for indexPath: IndexPath) -> T {
+        guard let cell = collectionView.dequeueReusableCell(withReuseIdentifier: cellType.reuseId, for: indexPath) as? T else {
+            fatalError("Unable to dequeue \(cellType)")}
+        cell.configure(with: value)
+        return cell
+    }
+}
+
 // MARK: - extension UIButton
 
 extension UIButton {
@@ -104,6 +132,12 @@ extension UIImageView {
         self.init()
         self.image = image
         self.contentMode = contentMode
+    }
+    
+    func setupColor(color: UIColor) {
+        let templateImage = self.image?.withRenderingMode(.alwaysTemplate)
+        self.image = templateImage
+        self.tintColor = color
     }
 }
 

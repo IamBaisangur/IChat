@@ -30,7 +30,7 @@ class PeopleViewController: UIViewController {
         
         setupCollectionView()
         createDataSource()
-        reloadData()
+        reloadData(with: nil)
     }
     
     
@@ -42,7 +42,7 @@ class PeopleViewController: UIViewController {
         
         collectionView.register(SectionHeader.self, forSupplementaryViewOfKind: UICollectionView.elementKindSectionHeader, withReuseIdentifier: SectionHeader.reuseId)
         
-        collectionView.register(UICollectionViewCell.self, forCellWithReuseIdentifier: "cellid")
+        collectionView.register(UserCell.self, forCellWithReuseIdentifier: UserCell.reuseId)
     }
     
     private func setupSearchBar() {
@@ -54,10 +54,14 @@ class PeopleViewController: UIViewController {
         searchController.searchBar.delegate = self
     }
     
-    private func reloadData() {
+    private func reloadData(with searchText: String?) {
+        let filtred = users.filter { (user) -> Bool in
+            user.contains(filter: searchText)
+        }
+        
         var snapshot = NSDiffableDataSourceSnapshot<Section, MUser>()
         snapshot.appendSections([.users])
-        snapshot.appendItems(users, toSection: .users)
+        snapshot.appendItems(filtred, toSection: .users)
         dataSource?.apply(snapshot, animatingDifferences: true)
     }
 }
@@ -71,9 +75,7 @@ extension PeopleViewController {
             
             switch section {
             case .users:
-                let cell = collectionView.dequeueReusableCell(withReuseIdentifier: "cellid", for: indexPath)
-                cell.backgroundColor = .systemBlue
-                return cell
+                return self.configure(collectionView: collectionView, cellType: UserCell.self, with: user, for: indexPath)
             }
                 
         })
@@ -150,7 +152,7 @@ extension PeopleViewController {
 
 extension PeopleViewController: UISearchBarDelegate {
     func searchBar(_ searchBar: UISearchBar, textDidChange searchText: String) {
-        print(searchText)
+        reloadData(with: searchText)
     }
 }
 
