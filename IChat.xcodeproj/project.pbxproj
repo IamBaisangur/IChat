@@ -28,6 +28,8 @@
 		02562A2028E5531800F7447C /* ButtonFormView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 02562A1F28E5531800F7447C /* ButtonFormView.swift */; };
 		02562A2228E58D5400F7447C /* SignUpViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 02562A2128E58D5400F7447C /* SignUpViewController.swift */; };
 		02562A2528E5B74B00F7447C /* OneLineTextField.swift in Sources */ = {isa = PBXBuildFile; fileRef = 02562A2428E5B74B00F7447C /* OneLineTextField.swift */; };
+		02609D9F2906A1F10078F756 /* Validators.swift in Sources */ = {isa = PBXBuildFile; fileRef = 02609D9E2906A1F10078F756 /* Validators.swift */; };
+		02609DA12906BB140078F756 /* AuthError.swift in Sources */ = {isa = PBXBuildFile; fileRef = 02609DA02906BB140078F756 /* AuthError.swift */; };
 		0295906D28FFF84400D6D653 /* ProfileViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0295906C28FFF84300D6D653 /* ProfileViewController.swift */; };
 		0295906F2900140B00D6D653 /* InsertableTextField.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0295906E2900140A00D6D653 /* InsertableTextField.swift */; };
 		02A7625528FEA03B005CC21A /* UserCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 02A7625428FEA03B005CC21A /* UserCell.swift */; };
@@ -38,6 +40,7 @@
 		02BDA22728D8306B003C6D51 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 02BDA22628D8306B003C6D51 /* Assets.xcassets */; };
 		02BDA22A28D8306B003C6D51 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 02BDA22828D8306B003C6D51 /* LaunchScreen.storyboard */; };
 		02BDA23228D847B0003C6D51 /* ExtensionsUIKit.swift in Sources */ = {isa = PBXBuildFile; fileRef = 02BDA23128D847B0003C6D51 /* ExtensionsUIKit.swift */; };
+		02C3316729096F4A00B961F8 /* AuthNavigatingDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 02C3316629096F4A00B961F8 /* AuthNavigatingDelegate.swift */; };
 		02D6F44D28EDA754002DD3DD /* ListViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 02D6F44C28EDA754002DD3DD /* ListViewController.swift */; };
 		02D6F44F28EDC328002DD3DD /* MainTabBarController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 02D6F44E28EDC328002DD3DD /* MainTabBarController.swift */; };
 		02D6F45128EDC424002DD3DD /* PeopleViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 02D6F45028EDC424002DD3DD /* PeopleViewController.swift */; };
@@ -63,6 +66,8 @@
 		02562A1F28E5531800F7447C /* ButtonFormView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ButtonFormView.swift; sourceTree = "<group>"; };
 		02562A2128E58D5400F7447C /* SignUpViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SignUpViewController.swift; sourceTree = "<group>"; };
 		02562A2428E5B74B00F7447C /* OneLineTextField.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = OneLineTextField.swift; sourceTree = "<group>"; };
+		02609D9E2906A1F10078F756 /* Validators.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Validators.swift; sourceTree = "<group>"; };
+		02609DA02906BB140078F756 /* AuthError.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AuthError.swift; sourceTree = "<group>"; };
 		0295906C28FFF84300D6D653 /* ProfileViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProfileViewController.swift; sourceTree = "<group>"; };
 		0295906E2900140A00D6D653 /* InsertableTextField.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = InsertableTextField.swift; sourceTree = "<group>"; };
 		02A7625428FEA03B005CC21A /* UserCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UserCell.swift; sourceTree = "<group>"; };
@@ -75,6 +80,7 @@
 		02BDA22928D8306B003C6D51 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		02BDA22B28D8306B003C6D51 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		02BDA23128D847B0003C6D51 /* ExtensionsUIKit.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ExtensionsUIKit.swift; sourceTree = "<group>"; };
+		02C3316629096F4A00B961F8 /* AuthNavigatingDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AuthNavigatingDelegate.swift; sourceTree = "<group>"; };
 		02D6F44C28EDA754002DD3DD /* ListViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ListViewController.swift; sourceTree = "<group>"; };
 		02D6F44E28EDC328002DD3DD /* MainTabBarController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MainTabBarController.swift; sourceTree = "<group>"; };
 		02D6F45028EDC424002DD3DD /* PeopleViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PeopleViewController.swift; sourceTree = "<group>"; };
@@ -107,6 +113,7 @@
 			isa = PBXGroup;
 			children = (
 				021B182328F95789000C4ED8 /* SelfConfiguringCell.swift */,
+				02C3316629096F4A00B961F8 /* AuthNavigatingDelegate.swift */,
 			);
 			path = Protocols;
 			sourceTree = "<group>";
@@ -197,12 +204,22 @@
 				02B6161728F693E300A30DDD /* Controllers */,
 				021B182528F957D1000C4ED8 /* Protocols */,
 				02562A2328E5B70100F7447C /* Extensions */,
+				02C33165290933CE00B961F8 /* Helpers */,
 				02BDA22628D8306B003C6D51 /* Assets.xcassets */,
 				02BDA22828D8306B003C6D51 /* LaunchScreen.storyboard */,
 				02BDA22B28D8306B003C6D51 /* Info.plist */,
 				024B23802901601700CFA032 /* GoogleService-Info.plist */,
 			);
 			path = IChat;
+			sourceTree = "<group>";
+		};
+		02C33165290933CE00B961F8 /* Helpers */ = {
+			isa = PBXGroup;
+			children = (
+				02609DA02906BB140078F756 /* AuthError.swift */,
+				02609D9E2906A1F10078F756 /* Validators.swift */,
+			);
+			path = Helpers;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -286,14 +303,17 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				02C3316729096F4A00B961F8 /* AuthNavigatingDelegate.swift in Sources */,
 				0223812A28E718330030D8C1 /* SetupProfileViewController.swift in Sources */,
 				02562A2228E58D5400F7447C /* SignUpViewController.swift in Sources */,
 				02D6F44F28EDC328002DD3DD /* MainTabBarController.swift in Sources */,
 				02BDA22228D83065003C6D51 /* AuthViewController.swift in Sources */,
 				02562A2028E5531800F7447C /* ButtonFormView.swift in Sources */,
 				02409AE928F2B55400567E2D /* Bundle-Decodable.swift in Sources */,
+				02609DA12906BB140078F756 /* AuthError.swift in Sources */,
 				020F95DC28FD68F5001BDBC9 /* MChat.swift in Sources */,
 				021B182028F94272000C4ED8 /* GradientView.swift in Sources */,
+				02609D9F2906A1F10078F756 /* Validators.swift in Sources */,
 				021B182728F96237000C4ED8 /* SectionHeader.swift in Sources */,
 				02BDA21E28D83065003C6D51 /* AppDelegate.swift in Sources */,
 				02D6F45128EDC424002DD3DD /* PeopleViewController.swift in Sources */,
